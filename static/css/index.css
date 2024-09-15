@@ -1,0 +1,68 @@
+
+        /* General form styles */
+.container {
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #f9f9f98e;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(168, 182, 15, 0.995);
+    background-color: #f9f9f98e;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000fc;
+}
+h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e1908e1;
+}
+/* Form input labels */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Input fields */
+input[type="number"],
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000000;
+}
+
+/* Focus state for input fields */
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #dedb36;
+    box-shadow: 0 0 8px rgba(178, 207, 15, 0.942);
+}
+
+/* Button styling */
+button {
+    background-color: #d23511;
+    color: rgb(240, 238, 238);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ef4021fc;
+}
