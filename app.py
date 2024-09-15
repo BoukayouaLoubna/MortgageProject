@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 # Load the pre-trained (MortgagePipelineModel) model from the pickle file 
 logger.debug("Start loading the model...")
-with open('model\MortgagePipelineModel.pkl', 'rb') as f:
+with open('model/MortgagePipelineModel.pkl', 'rb') as f:
     model = joblib.load(f)
 logger.debug("Model loaded")
 
