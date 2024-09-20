@@ -124,10 +124,6 @@ def predict():
            logger.error(f"Error Occurred During Prediction Process: {e}")
            return render_template('index.html', error_message=f"An error occurred: {str(e)}",cat_cols=cat_cols, num_cols=form_data)
 
-#if __name__ == '__main__':
- #   logger.debug("Flask app Started")
-  #  app.run(debug=True)
-
 if __name__ == '__main__':
     logger.debug("Starting the Flask app.")
     app.run(host='0.0.0.0', port=5000, debug=True)

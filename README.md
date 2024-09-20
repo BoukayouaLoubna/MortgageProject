@@ -63,5 +63,11 @@ The pipeline successfully integrates both classification and regression models t
 - Deployment: Flask
 - aws : as a cloud platform for feployment 
 
+## AWS Deployment :
+The Flask web application is deployed on AWS Elastic Beanstalk, ensuring scalability and ease of management. The deployment process involves creating an S3 bucket for storing static files and media, Dockerizing the Flask API for consistency across environments, and using Elastic Beanstalk to manage the application infrastructure. AWS Elastic Beanstalk automatically handles the deployment, scaling, and monitoring of the application. SSL certificates for secure communication are configured using AWS Certificate Manager (ACM), while Route 53 manages the domain.
+
+For continuous monitoring and scaling, AWS CloudWatch is implemented, and the application can scale automatically to handle varying loads. This setup ensures the application remains resilient and performs optimally during peak usage.
+deployment link : http://ec2-13-60-3-130.eu-north-1.compute.amazonaws.com:5000
+
 ## conclusion : 
 Finally, users can interact with the web app interface by inputting their own feature values to make predictions. By providing the relevant loan attributes through the app, users can receive real-time predictions on whether a loan will become delinquent (via the GBM model) and the expected prepayment rate (via the Lasso regression model). This makes the app accessible for end-users to explore predictions interactively.
