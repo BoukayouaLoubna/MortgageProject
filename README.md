@@ -71,19 +71,19 @@ For continuous monitoring and scaling, AWS CloudWatch is implemented, and the ap
 ### deployment details:  
 1. Connect to Your EC2 Instance  
 Use the SSH command below to connect to your EC2 instance. Replace <key> with your .pem key file name and <my-instance> with your instance's public IP address.  
-ssh -i "<key>.pem" ubuntu@<my-instance>  
+```bash  ssh -i "<key>.pem" ubuntu@<my-instance>  ``` 
 
 2. Update and Upgrade System Packages  
 Update and upgrade your EC2 instance's packages:  
-sudo apt update -y && sudo apt upgrade -y  
+```bash sudo apt update -y && sudo apt upgrade -y  ```
 
 3. Install Docker  
 Install Docker to run your application in a container:  
-sudo apt install docker.io  
+```bash sudo apt install docker.io  ```
 
 4. Clone the Project Repository  
 Clone the GitHub repository for this project using:  
-sudo git clone <project repository>  
+```bash sudo git clone <project repository>  ```
 Replace <project repository> with your actual repository URL.  
 
 5. Adjust Security Group Settings  
@@ -94,7 +94,7 @@ Source: 0.0.0.0/0
 
 6. Run the Docker Container  
 Start the Docker container for the project. Replace <project-name> with your Docker image name:  
-docker run -d -p 5000:5000 <project-name>  
+```bash sudo docker run -d -p 5000:5000 <project-name>  ```
 Now your Flask web application should be live and accessible at http://<my-instance>:5000.  
 
 My deployment link : http://ec2-13-60-3-130.eu-north-1.compute.amazonaws.com:5000  
