@@ -67,7 +67,37 @@ The pipeline successfully integrates both classification and regression models t
 The Flask web application is deployed on AWS Elastic Beanstalk, ensuring scalability and ease of management. The deployment process involves creating an S3 bucket for storing static files and media, Dockerizing the Flask API for consistency across environments, and using Elastic Beanstalk to manage the application infrastructure. AWS Elastic Beanstalk automatically handles the deployment, scaling, and monitoring of the application. SSL certificates for secure communication are configured using AWS Certificate Manager (ACM), while Route 53 manages the domain.
 
 For continuous monitoring and scaling, AWS CloudWatch is implemented, and the application can scale automatically to handle varying loads. This setup ensures the application remains resilient and performs optimally during peak usage.
-deployment link : http://ec2-13-60-3-130.eu-north-1.compute.amazonaws.com:5000
+
+### deployment details:  
+1. Connect to Your EC2 Instance  
+Use the SSH command below to connect to your EC2 instance. Replace <key> with your .pem key file name and <my-instance> with your instance's public IP address.  
+ssh -i "<key>.pem" ubuntu@<my-instance>  
+
+2. Update and Upgrade System Packages  
+Update and upgrade your EC2 instance's packages:  
+sudo apt update -y && sudo apt upgrade -y  
+
+3. Install Docker  
+Install Docker to run your application in a container:  
+sudo apt install docker.io  
+
+4. Clone the Project Repository  
+Clone the GitHub repository for this project using:  
+sudo git clone <project repository>  
+Replace <project repository> with your actual repository URL.  
+
+5. Adjust Security Group Settings  
+Update your EC2 instance's security group to allow traffic on port 5000:  
+Port Range: 5000  
+Protocol: TCP  
+Source: 0.0.0.0/0  
+
+6. Run the Docker Container  
+Start the Docker container for the project. Replace <project-name> with your Docker image name:  
+docker run -d -p 5000:5000 <project-name>  
+Now your Flask web application should be live and accessible at http://<my-instance>:5000.  
+
+My deployment link : http://ec2-13-60-3-130.eu-north-1.compute.amazonaws.com:5000  
 
 ## conclusion : 
 Finally, users can interact with the web app interface by inputting their own feature values to make predictions. By providing the relevant loan attributes through the app, users can receive real-time predictions on whether a loan will become delinquent (via the GBM model) and the expected prepayment rate (via the Lasso regression model). This makes the app accessible for end-users to explore predictions interactively.
