@@ -1,5 +1,45 @@
-## Overview
-This project aims to build a machine learning pipeline integrating a Gradient Boosting Machine (GBM) for binary classification and a Lasso regression model for continuous prediction to evaluate delinquency and prepayment risk in mortgage loans. Implemented as a Flask-based web application, it allows users to input key mortgage-related data, generating two predictions: a classification to assess the likelihood of loan default and a regression to estimate the prepayment rate, offering a comprehensive analysis of loan risk.
+# MSB Project
+
+## Project Overview
+This project aims to build a machine learning pipeline integrating two models: a Gradient Boosting Machine (GBM) for binary classification and a Lasso regression model for continuous prediction.   
+The objective is to evaluate delinquency and prepayment risks in mortgage loans using a Flask-based web application. 
+The system generates predictions for both loan default risks and prepayment rates based on user input.
+
+## Task Summary
+
+### Task 1: Data Preprocessing
+- Data Cleaning: Remove inconsistencies and errors from the dataset to ensure accuracy.  
+- Data Encoding: Convert categorical data into numerical formats for analysis.  
+- Data Labelling: Assign labels to classify different elements in the dataset.
+   
+### Task 2: Case Study on Mortgage Loans  
+- Conduct a detailed analysis of mortgage loan data to identify trends, risks, and opportunities.  
+- Summarize findings in a report.
+  
+### Task 3: Exploratory Data Analysis (EDA)
+- Univariate Analysis: Analyze the distribution of individual features.
+- Bivariate Analysis: Examine relationships between pairs of features.
+- Multivariate Analysis: Analyze interactions between multiple features using advanced techniques like PCA and correlation matrices.
+  
+### Task 4: Feature Engineering
+- Feature Selection: Identify and retain important features.
+- Creation of New Features: Generate new features based on domain knowledge or data insights.
+- Normalization and Scaling: Standardize features to prevent dominance during model training.
+- Encoding Categorical Variables: Convert categorical variables using methods like one-hot encoding.
+  
+### Task 5: Prepayment Variable Creation
+- Based on available data, derive a prepayment variable to be used in regression models.
+  
+### Task 6: Model Integration and Pipeline
+- Binary Classification: Use GBM to classify loan default risks.
+- Regression Model: Use Lasso regression to predict prepayment rates.
+- Pipeline Creation: Create a pipeline that integrates both models for streamlined prediction.
+- Testing and Evaluation: Ensure proper functioning and evaluate using suitable metrics.
+- Documentation: Thoroughly document the pipeline with detailed comments and explanations.
+
+### Final Task: 
+This task aims to build a machine learning pipeline integrating a Gradient Boosting Machine (GBM) for binary classification and a Lasso regression model for continuous prediction to evaluate delinquency and prepayment risk in mortgage loans. 
+Implemented as a Flask-based web application, it allows users to input key mortgage-related data, generating two predictions: a classification to assess the likelihood of loan default and a regression to estimate the prepayment rate, offering a comprehensive analysis of loan risk.
 
 ## Project Structure
 
